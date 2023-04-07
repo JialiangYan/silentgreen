@@ -1,0 +1,7 @@
+export * from './myheader'
+export * from './sidemenu'
+export * from './numDes'
+export * from './chart'
+export * from './circleChart'
+export * from './login'
+export * from './register'

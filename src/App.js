@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, Suspense } from 'react'
+import './App.css'
+import loginContext from './config/loginContext'
+// 导入页面
+const LoginPage = React.lazy(() =>
+  import('./layout/login/LoginPage').then(({ LoginPage }) => ({
+    default: LoginPage,
+  }))
+)
+const MainPage = React.lazy(() =>
+  import('./layout/main/MainPage').then(({ MainPage }) => ({
+    default: MainPage,
+  }))
+)
 
-function App() {
+const App = () => {
+  const [isLogin, setIsLogin] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isLogin ? (
+        <Suspense fallback={<div>Loading...</div>}>
+          <MainPage />
+        </Suspense>
+      ) : (
+        <Suspense fallback={<div>Loading...</div>}>
+          <loginContext.Provider value={{ isLogin, setIsLogin }}>
+            <LoginPage />
+          </loginContext.Provider>
+        </Suspense>
+      )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

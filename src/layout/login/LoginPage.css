@@ -1,0 +1,47 @@
+/* body {
+  background-image: url('../../assets/background.jpg');
+  background-size: 100% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 1600px;
+  z-index: -10;
+  zoom: 1;
+} */
+
+body {
+  background: linear-gradient(
+    to right,
+    #30991e 0%,
+    #2ce0bf 19%,
+    #76dd2c 40%,
+    #c6db2b 60%,
+    #2ce0c8 83%,
+    #30991e 100%
+  );
+  background-size: 10000px 100%;
+  animation: bg 15s linear infinite;
+}
+
+@keyframes bg {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 10000px;
+  }
+}
+
+.loginPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
