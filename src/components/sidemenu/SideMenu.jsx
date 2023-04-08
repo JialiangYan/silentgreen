@@ -17,7 +17,7 @@ function getItem(label, key, icon, children, type) {
 
 export const SideMenu = () => {
   const items = [
-    getItem('overall', 'sub1', <AreaChartOutlined />, [
+    getItem('fang', 'sub1', <AreaChartOutlined />, [
       getItem('区域', '1'),
       getItem('行业', '2'),
     ]),

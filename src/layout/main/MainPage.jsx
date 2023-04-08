@@ -52,13 +52,13 @@ export const MainPage = () => {
 
   return (
     <div className="main">
-      <Layout style={{ height: '100vh' }}>
+      <Layout style={{ height: '100%' }}>
         {/* 顶栏 */}
         <MyHeader />
         {/* 顶栏以下的部分 */}
         <Layout>
           {/* 侧边栏 */}
-          <Sider width={200}>
+          <Sider>
             <SideMenu />
           </Sider>
           {/* 内容 */}
@@ -133,7 +133,7 @@ export const MainPage = () => {
               </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>
-              Greenwashing @2023/All Right Reserved
+              默绿SilentGreen @2023/All Right Reserved
             </Footer>
           </Layout>
         </Layout>

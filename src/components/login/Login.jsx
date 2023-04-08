@@ -39,7 +39,7 @@ export const Login = () => {
         autoComplete="off"
         className="form"
       >
-        <span className="title">漂绿监管平台</span>
+        <span className="title">默绿SilentGreen</span>
         <div className="form-container">
           <Form.Item
             label=""
@@ -61,7 +61,7 @@ export const Login = () => {
         </Button>
       </Form>
       <div className="form-section">
-        <p>绿色漂洗</p>
+        <p>默绿SilentGreen @2023/All Right Reserved</p>
       </div>
     </div>
   )

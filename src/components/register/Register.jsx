@@ -35,7 +35,7 @@ export const Register = () => {
         autoComplete="off"
         className="form"
       >
-        <span className="title">漂绿监管平台</span>
+        <span className="title">默绿SilentGreen</span>
         <span className="subtitle">使用邮箱免费注册账号</span>
         <div className="form-container">
           <Form.Item

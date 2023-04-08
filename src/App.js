@@ -14,7 +14,8 @@ const MainPage = React.lazy(() =>
 )
 
 const App = () => {
-  const [isLogin, setIsLogin] = useState(false)
+  // 测试用，展示把false换成true
+  const [isLogin, setIsLogin] = useState(true)
 
   return (
     <div className="App">

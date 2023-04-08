@@ -1,4 +1,7 @@
 .sides {
   padding: 0;
-  line-height: 10vh;
+  line-height: 100%;
+  background-color: #fff;
+  height: 92vh;
+  width: 200px;
 }
