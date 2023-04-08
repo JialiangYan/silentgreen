@@ -5,22 +5,10 @@ import './MainPage.css'
 import { Routes, Route } from 'react-router-dom'
 import Logo from '../../assets/logo.jpg'
 import { MyHeader, SideMenu } from '../../components'
-import {
-  RegionPage,
-  IndustryPage,
-  ReAnalysisPage,
-  HistTrendPage,
-  UserInfoPage,
-  PortraitPage,
-  AccessPage,
-  RankingPage,
-  MonitorPage,
-  TablePage,
-} from '../../pages'
+import { sideItems, flatten } from '../../const'
 import { dbData } from '../../mock/dbData'
 import { carbonData } from '../../mock/carbonData'
 import { emailData } from '../../mock/emailData'
-
 const { Content, Footer, Sider } = Layout
 const antIcon = <LoadingOutlined style={{ fontSize: 60 }} spin />
 
@@ -58,75 +46,21 @@ export const MainPage = () => {
         {/* 顶栏以下的部分 */}
         <Layout>
           {/* 侧边栏 */}
-          <Sider>
-            <SideMenu />
-          </Sider>
+          <SideMenu />
           {/* 内容 */}
-          <Layout style={{ padding: '0 24px 24px' }}>
-            <Content style={{ margin: '24px 16px 0' }}>
-              <div
-                className="content"
-                style={{
-                  padding: 24,
-                  minHeight: 360,
-                }}
-              >
+          <Layout>
+            <Content style={{ margin: '24px 24px 0', backgroundColor: '#fff' }}>
+              <div className="content">
                 <Routes>
-                  {/* 总体分析 */}
-                  <Route
-                    path="/overall/region"
-                    element={<RegionPage />}
-                  ></Route>
-                  <Route
-                    path="/overall/industry"
-                    element={<IndustryPage />}
-                  ></Route>
-
-                  {/* 访问分析 */}
-                  <Route
-                    path="/analysis/reAnalysis"
-                    element={<ReAnalysisPage />}
-                  ></Route>
-                  <Route
-                    path="/analysis/histTrend"
-                    element={<HistTrendPage />}
-                  ></Route>
-
-                  {/* 用户分析 */}
-                  <Route
-                    path="/user/userinfo"
-                    element={<UserInfoPage />}
-                  ></Route>
-                  <Route
-                    path="/user/userPortrait"
-                    element={<PortraitPage />}
-                  ></Route>
-
-                  {/* 页面分析 */}
-                  <Route path="/page/ranking" element={<RankingPage />}></Route>
-                  <Route
-                    path="/page/perfMonitor"
-                    element={<MonitorPage />}
-                  ></Route>
-                  <Route
-                    path="/page/accessDepth"
-                    element={<AccessPage />}
-                  ></Route>
-
-                  {/* 数据修改 */}
-                  <Route
-                    path="/data/carbon"
-                    element={<TablePage data={carbonData} />}
-                  ></Route>
-                  <Route
-                    path="/data/db"
-                    element={<TablePage data={dbData} />}
-                  ></Route>
-                  <Route
-                    path="/data/email"
-                    element={<TablePage data={emailData} />}
-                  ></Route>
-
+                  {flatten(sideItems).map((item, key) => {
+                    return (
+                      <Route
+                        path={item.path}
+                        element={item.element}
+                        key={key}
+                      />
+                    )
+                  })}
                   {/* 404页面 */}
                   <Route path="*" element={<h1>404 Not Found</h1>}></Route>
                 </Routes>

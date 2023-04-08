@@ -1,7 +1,13 @@
 .sides {
   padding: 0;
   line-height: 100%;
+  text-align: left;
   background-color: #fff;
   height: 92vh;
-  width: 200px;
+  width: 100%;
+}
+
+/* 去掉antd预设的宽度 */
+aside {
+  width: 11vw !important;
 }

@@ -1,48 +1,35 @@
 import React, { useState } from 'react'
-import { AreaChartOutlined } from '@ant-design/icons'
-import { MenuProps } from 'antd'
+import {
+  AreaChartOutlined,
+  PieChartOutlined,
+  RadarChartOutlined,
+} from '@ant-design/icons'
+import { Layout, Menu, ConfigProvider } from 'antd'
 import { useNavigate } from 'react-router-dom'
-import { ConfigProvider, Menu } from 'antd'
 import './SideMenu.css'
-
-function getItem(label, key, icon, children, type) {
-  return {
-    key,
-    icon,
-    children,
-    label,
-    type,
-  }
-}
+import { sideItems } from '../../const'
+const { Sider } = Layout
 
 export const SideMenu = () => {
   const items = [
-    getItem('fang', 'sub1', <AreaChartOutlined />, [
-      getItem('区域', '1'),
-      getItem('行业', '2'),
-    ]),
-
-    getItem('analysis', 'su2', <AreaChartOutlined />, [
-      getItem('实时数据', '3'),
-      getItem('历史趋势', '4'),
-    ]),
-
-    getItem('user', 'sub3', <AreaChartOutlined />, [
-      getItem('用户情况', '5'),
-      getItem('用户画像', '6'),
-    ]),
-
-    getItem('page', 'sub4', <AreaChartOutlined />, [
-      getItem('页面排行', '7'),
-      getItem('性能监控', '8'),
-      getItem('访问深度', '9'),
-    ]),
-
-    getItem('data', 'sub5', <AreaChartOutlined />, [
-      getItem('碳排放因子', '10'),
-      getItem('外接数据库', '11'),
-      getItem('邮件', '12'),
-    ]),
+    sideItems.map((item) => {
+      return !!item.sub
+        ? {
+            key: item.key,
+            icon: item.icon,
+            children: [
+              ...item.sub.map((i) => {
+                return { key: i.key, label: i.label }
+              }),
+            ],
+            label: item.label,
+          }
+        : {
+            key: item.key,
+            icon: item.icon,
+            label: item.label,
+          }
+    }),
   ]
 
   const [current, setCurrent] = useState('1')
@@ -51,40 +38,37 @@ export const SideMenu = () => {
   const nav = (num) => {
     switch (num) {
       case '1':
-        navigate('/overall/region')
-        break
-      case '2':
-        navigate('/overall/industry')
-        break
-      case '3':
         navigate('/analysis/reAnalysis')
         break
-      case '4':
+      case '2':
         navigate('/analysis/histTrend')
         break
+      case '3':
+        navigate('/company/companyInfo')
+        break
+      case '4':
+        navigate('/company/companyPortrait')
+        break
       case '5':
-        navigate('/user/userinfo')
+        navigate('/company/companyData')
         break
       case '6':
-        navigate('/user/userPortrait')
+        navigate('/overall/region')
         break
       case '7':
-        navigate('/page/ranking')
+        navigate('/overall/industry')
         break
       case '8':
-        navigate('/page/perfMonitor')
+        navigate('/carbon/carbonData')
         break
       case '9':
-        navigate('/page/accessDepth')
+        navigate('/carbon/carbonSrc')
         break
       case '10':
-        navigate('/data/carbon')
+        navigate('/green/grade')
         break
       case '11':
-        navigate('/data/db')
-        break
-      case '12':
-        navigate('/data/email ')
+        navigate('/green/greenWashing')
         break
     }
   }
@@ -98,22 +82,24 @@ export const SideMenu = () => {
   }
 
   return (
-    <div className="sides">
-      <ConfigProvider
-        theme={{
-          token: {
-            colorPrimary: '#00b96b',
-          },
-        }}
-      >
-        <Menu
-          theme="light"
-          onClick={onClick}
-          selectedKeys={[current]}
-          mode="inline"
-          items={items}
-        />
-      </ConfigProvider>
-    </div>
+    <Sider>
+      <div className="sides">
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: '#00b96b',
+            },
+          }}
+        >
+          <Menu
+            theme="light"
+            onClick={onClick}
+            selectedKeys={[current]}
+            mode="inline"
+            items={items[0]}
+          />
+        </ConfigProvider>
+      </div>
+    </Sider>
   )
 }
