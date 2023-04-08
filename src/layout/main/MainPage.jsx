@@ -16,6 +16,10 @@ import {
   RankingPage,
   MonitorPage,
   TablePage,
+    BMapPage,
+  CompanyCardPage,
+  CompanyTablePage,
+  CompanyDataPage,
 } from '../../pages'
 import { dbData } from '../../mock/dbData'
 import { carbonData } from '../../mock/carbonData'
@@ -72,6 +76,11 @@ export const MainPage = () => {
                 }}
               >
                 <Routes>
+                  {/*企业分析*/}
+                  <Route path="/CompanyTable" element={<CompanyTablePage/>}></Route>
+                <Route path='/CompanyData' element={<CompanyDataPage/>}></Route>
+                <Route path='/CompanyCard' element={<CompanyCardPage/>}></Route>
+                <Route path='/BaiduMap' element={<BMapPage/>}></Route>
                   {/* 总体分析 */}
                   <Route
                     path="/overall/region"
