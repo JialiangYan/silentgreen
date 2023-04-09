@@ -94,6 +94,7 @@ const sideItems = [
     key: '10',
     icon: <I.RadarChartOutlined />,
     element: lazy(() => import('./pages/reAnalysis')),
+    path: '/greenGrade',
     identity: 'manager',
   },
   {
@@ -101,6 +102,7 @@ const sideItems = [
     key: '11',
     icon: <I.RadarChartOutlined />,
     element: lazy(() => import('./pages/reAnalysis')),
+    path: '/greenWashing',
     identity: 'manager',
   },
   {
@@ -108,6 +110,7 @@ const sideItems = [
     key: '12',
     icon: <I.EditOutlined />,
     element: lazy(() => import('./pages/reAnalysis')),
+    path: '/declare',
     identity: 'company',
   },
   {
@@ -115,6 +118,7 @@ const sideItems = [
     key: '13',
     icon: <I.EditOutlined />,
     element: lazy(() => import('./pages/reAnalysis')),
+    path: '/feedback',
     identity: 'company',
   },
 ]
@@ -128,5 +132,8 @@ const flatten = function (arr) {
     )
   }, [])
 }
+
+// // 测试菜单列表
+// console.log(flatten(sideItems))
 
 export { sideItems, flatten }

@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Layout, theme, Spin, ConfigProvider } from 'antd'
+import { Layout } from 'antd'
 import { LoadingOutlined } from '@ant-design/icons'
 import './MainPage.css'
 import { Routes, Route } from 'react-router-dom'
-import Logo from '../../assets/logo.jpg'
-import { MyHeader, SideMenu } from '../../components'
+import { MyHeader, SideMenu, Loading } from '../../components'
 import { sideItems, flatten } from '../../const'
-import { dbData } from '../../mock/dbData'
-import { carbonData } from '../../mock/carbonData'
-import { emailData } from '../../mock/emailData'
-const { Content, Footer, Sider } = Layout
-const antIcon = <LoadingOutlined style={{ fontSize: 60 }} spin />
+const { Content, Footer } = Layout
 
 export const MainPage = () => {
   // 加载动画
@@ -24,18 +19,7 @@ export const MainPage = () => {
   }, [])
 
   if (loading) {
-    return (
-      <Layout style={{ height: '100vh' }}>
-        <Spin
-          indicator={antIcon}
-          style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            lineHeight: '100vh',
-          }}
-        />
-      </Layout>
-    )
+    return <Loading />
   }
 
   return (
@@ -53,11 +37,13 @@ export const MainPage = () => {
               <div className="content">
                 <Routes>
                   {flatten(sideItems).map((item, key) => {
+                    console.log(item.element)
                     return (
                       <Route
                         path={item.path}
-                        element={item.element}
+                        element={<item.element />}
                         key={key}
+                        exact
                       />
                     )
                   })}
