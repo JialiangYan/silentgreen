@@ -37,7 +37,7 @@ const data = [
 
   },
 ];
-export const CompanyTablePage = () => {
+export default function CompanyTablePage  () {
   const [searchText, setSearchText] = useState('');
   const [searchedColumn, setSearchedColumn] = useState('');
   const searchInput = useRef(null);

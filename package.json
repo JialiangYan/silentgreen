@@ -19,6 +19,7 @@
     "jwt-decode": "^3.1.2",
     "react": "^18.1.0",
     "react-app-rewired": "^2.2.1",
+    "react-bmapgl": "^0.2.17",
     "react-dom": "^18.1.0",
     "react-highlight-words": "^0.20.0",
     "react-redux": "^8.0.5",

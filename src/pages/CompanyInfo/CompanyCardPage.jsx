@@ -11,7 +11,7 @@ const contentStyle = {
   background: '#364d79',
 };
 
-export const CompanyCardPage= () => {
+export default function CompanyCardPage (){
     return(
          <>
             <Carousel autoplay>
