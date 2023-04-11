@@ -1,2 +1,2 @@
 export * from './BMapPage'
-export * from './TestMapPage'
+export * from './greenMapPage'

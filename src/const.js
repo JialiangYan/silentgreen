@@ -58,7 +58,7 @@ const sideItems = [
         label: '区域信息',
         key: '6',
         path: '/overall/region',
-        element: lazy(() => import('./pages/reAnalysis')),
+        element: lazy(() => import('./pages/BaiduMap/greenMapPage')),
       },
       {
         label: '行业信息',
@@ -75,16 +75,16 @@ const sideItems = [
     icon: <I.RadarChartOutlined />,
     sub: [
       {
-        label: '核放数据',
+        label: '核算数据',
         key: '8',
         path: '/carbon/carbonData',
-        element: lazy(() => import('./pages/reAnalysis')),
+        element: lazy(() => import('./pages/CarbonCal/CarbonCalData')),
       },
       {
         label: '排放源',
         key: '9',
         path: '/carbon/carbonSrc',
-        element: lazy(() => import('./pages/BaiduMap/TestMapPage')),
+        element: lazy(() => import('./pages/CarbonCal/CarbonSources')),
       },
     ],
     identity: 'manager',
