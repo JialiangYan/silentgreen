@@ -14,7 +14,7 @@ export const Login = () => {
   const onFinish = (values) => {
     // 暂时放在这里
     setIsLogin(true)
-    navigate('/overall/region')
+    navigate('/')
 
     axiosfunc('post', 'miserauth/login', values).then(
       (res) => {

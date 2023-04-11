@@ -80,8 +80,9 @@ for (let i = 0; i < 100; i++) {
     indicator7: 'oil',
   });
 }
-export const CompanyDataPage = () => (
-  <Table
+export default  function CompanyDataPage () {
+  return(
+        <Table
     columns={columns}
     dataSource={data}
     scroll={{
@@ -89,4 +90,6 @@ export const CompanyDataPage = () => (
       y: 300,
     }}
   />
-);
+      )
+
+};
