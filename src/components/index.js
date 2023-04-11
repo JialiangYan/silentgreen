@@ -1,6 +1,6 @@
 export * from './myheader'
 export * from './sidemenu'
-export * from './numDes'
+export * from './numCard'
 export * from './chart'
 export * from './circleChart'
 export * from './login'

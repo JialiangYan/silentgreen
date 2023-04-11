@@ -32,7 +32,7 @@ const sideItems = [
         label: '企业信息',
         key: '3',
         path: '/company/companyInfo',
-        element: lazy(() => import('./pages/reAnalysis')),
+        element: lazy(() => import('./pages/CompanyCard/CompanyCardPage')),
       },
       {
         label: '企业画像',
@@ -126,14 +126,8 @@ const sideItems = [
 // 扁平化
 const flatten = function (arr) {
   return arr.reduce((prev, curr) => {
-    return prev.concat(
-      // 有sub且sub不为[]且sub中的子项有path
-      !!curr.sub ? curr.sub : curr
-    )
+    return prev.concat(!!curr.sub ? curr.sub : curr)
   }, [])
 }
-
-// // 测试菜单列表
-// console.log(flatten(sideItems))
 
 export { sideItems, flatten }

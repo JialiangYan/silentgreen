@@ -33,7 +33,13 @@ export const MainPage = () => {
           <SideMenu />
           {/* 内容 */}
           <Layout>
-            <Content style={{ margin: '24px 24px 0', backgroundColor: '#fff' }}>
+            <Content
+              style={{
+                margin: '24px 24px 0',
+                padding: '24px 24px 0',
+                backgroundColor: '#fff',
+              }}
+            >
               <div className="content">
                 <Routes>
                   {flatten(sideItems).map((item, key) => {
