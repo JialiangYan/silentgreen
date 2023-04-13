@@ -18,7 +18,7 @@ const sideItems = [
         label: '历史趋势',
         key: '2',
         path: '/analysis/histTrend',
-        element: lazy(() => import('./pages/reAnalysis')),
+        element: lazy(() => import('./pages//histTrend')),
       },
     ],
     identity: 'manager',

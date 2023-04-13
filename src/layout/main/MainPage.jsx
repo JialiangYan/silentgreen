@@ -44,7 +44,6 @@ export const MainPage = () => {
               <div className="content">
                 <Routes>
                   {flatten(sideItems).map((item, key) => {
-                    console.log(item.element)
                     return (
                       <Route
                         path={item.path}
