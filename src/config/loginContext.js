@@ -1,10 +1,14 @@
 import { createContext } from 'react'
-
+import axiosfunc from "../utils/axiosfunc";
 const loginContext = createContext({
   isLogin: false,
-  identity: 'manager',
+  identity:'manager',
+
   setIsLogin: () => {},
-  setIdentity: () => {},
+  setIdentity: (userpower) => {
+    this.identity=userpower
+    return this.identity
+  },
 })
 
 export default loginContext

@@ -9,7 +9,10 @@ const { Sider } = Layout
 export const SideMenu = () => {
   const [current, setCurrent] = useState('1')
   const navigate = useNavigate()
-  const { identity } = useContext(loginContext)
+  const {identity}=useContext(loginContext)
+  //实现用户权限管理，从后端接收userpower
+  // const  identity  = localStorage.getItem('userpower')
+  // console.log(localStorage.getItem('userpower'))
   // 菜单栏列表
   const items = sideItems
     .filter((i) => {

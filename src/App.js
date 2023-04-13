@@ -16,7 +16,7 @@ const MainPage = React.lazy(() =>
 
 const App = () => {
   // 测试用，展示把false换成true，用户换成管理员
-  const [isLogin, setIsLogin] = useState(true)
+  const [isLogin, setIsLogin] = useState(false)
   const [identity, setIdentity] = useState('manager')
 
   return (
