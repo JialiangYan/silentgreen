@@ -13,7 +13,7 @@ export const SideMenu = () => {
   // 菜单栏列表
   const items = sideItems
     .filter((i) => {
-      return i.identity === identity
+      return i.identity === identity && i.path !== ''
     })
     .map((item) => {
       return !!item.sub

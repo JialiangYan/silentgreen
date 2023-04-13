@@ -121,6 +121,11 @@ const sideItems = [
     path: '/feedback',
     identity: 'company',
   },
+  // 兜底页面，无匹配作为默认页
+  {
+    path: '',
+    element: lazy(() => import('./pages/reAnalysis')),
+  },
 ]
 
 // 扁平化
