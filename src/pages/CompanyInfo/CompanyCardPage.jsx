@@ -49,6 +49,7 @@ export default function CompanyCardPage (){
                 hoverable
                 style={{width: 240}}
                 cover={<img height={'150px'} width={'150px'}  alt="example" src="https://img2.baidu.com/it/u=2857169278,4009073881&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=220"/>}
+                //点击跳转到detail页面
                 onClick={jump2Detail}
                 >
                 <Meta title="成都玉龙化工有限公司" description="官方网站：http://m.cdylhg.com/">

@@ -450,7 +450,7 @@ option = {
   ]
 };
   option &&myChart.setOption(option)
-
+      //地图点击相应企业跳转到detail页
       myChart.on('click',{name:'成都玉龙化工有限公司'},function (){
         navigate('/company/companyDetail')
       })
