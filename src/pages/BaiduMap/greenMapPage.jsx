@@ -4,10 +4,17 @@ import * as echarts from 'echarts';
 // https://api.map.baidu.com/api?v=3.0&ak=你申请的AK
 import 'echarts/extension/bmap/bmap';
 import {loadBMap} from "../../utils/loadBMap";
+import {useNavigate} from "react-router-dom";
 
 
 
 export default  function GreenMapPage(){
+      const navigate=useNavigate()
+    const jump2Detail=()=>{
+        navigate('/company/companyDetail')
+    }
+
+
   useEffect(() => {
     loadBMap('2wh1YHpb0qTHQxGEAvZG7cnNPay1WxH4').then(()=>{
             // const map = new window.BMapGL.Map("main");
@@ -233,6 +240,8 @@ const geoCoordMap = {
   武汉: [114.31, 30.52],
   大庆: [125.03, 46.58]
 };
+
+
 const convertData = function (data) {
   var res = [];
   for (var i = 0; i < data.length; i++) {
@@ -394,7 +403,8 @@ option = {
       label: {
         formatter: '{b}',
         position: 'right',
-        show: true
+        show: true,
+        onClick:jump2Detail,
       },
       emphasis: {
         label: {
@@ -440,6 +450,10 @@ option = {
   ]
 };
   option &&myChart.setOption(option)
+
+      myChart.on('click',{name:'成都玉龙化工有限公司'},function (){
+        navigate('/company/companyDetail')
+      })
     })
   }, []);
 

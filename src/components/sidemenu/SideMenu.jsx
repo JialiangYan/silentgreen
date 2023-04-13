@@ -59,6 +59,9 @@ export const SideMenu = () => {
             case '5':
               navigate('/company/companyData')
               break
+            case '14':
+              navigate('/company/companyDetail')
+              break
             case '6':
               navigate('/overall/region')
               break
@@ -77,6 +80,7 @@ export const SideMenu = () => {
             case '11':
               navigate('/greenWashing')
               break
+
           }
         }
       : (num) => {
