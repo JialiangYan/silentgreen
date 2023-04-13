@@ -7,13 +7,13 @@ import axiosfunc from "../../utils/axiosfunc";
 
 export const Register = () => {
   const navigate = useNavigate()
-  const { setIsLogin } = useContext(loginContext)
+  // const { setIsLogin } = useContext(loginContext)
   const onFinish = async (values) => {
     axiosfunc('post', '/miserauth/register', values).then(
       (res) => {
         console.log('get response', res)
-        setIsLogin(true)
-        navigate('/')
+        localStorage.setItem('isLogin','true')
+        navigate('/analysis/reAnalysis')
       },
       (error) => {
         console.log('get response failed!')

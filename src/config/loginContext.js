@@ -1,7 +1,7 @@
 import { createContext } from 'react'
 import axiosfunc from "../utils/axiosfunc";
 const loginContext = createContext({
-  isLogin: false,
+  isLogin: true,
   identity:'manager',
 
   setIsLogin: () => {},

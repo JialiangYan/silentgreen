@@ -12,10 +12,10 @@ export const Login = () => {
 
   // 表单成功提交
   const onFinish = (values) => {
-    // 暂时放在这里
-    // setIsLogin(true)
+    // 暂时放在这里,用后端把这行注释掉
+    setIsLogin(true)
       console.log(values)
-    navigate('/')
+    navigate('/analysis/reAnalysis')
 
    axiosfunc('post', 'miserauth/login', values).then(
       (res) => {
@@ -24,8 +24,10 @@ export const Login = () => {
 
             localStorage.setItem('isLogin','true')
             localStorage.setItem('userpower',res.userpower)
+            localStorage.setItem('userInfo',res.userInfo)
+            localStorage.setItem('userName',res.username)
             console.log(localStorage)
-            setIsLogin(true)
+            // setIsLogin(true)
 
 
         }
