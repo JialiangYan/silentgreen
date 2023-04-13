@@ -9,7 +9,11 @@ const { Sider } = Layout
 export const SideMenu = () => {
   const [current, setCurrent] = useState('1')
   const navigate = useNavigate()
-  const { identity } = useContext(loginContext)
+  //切换注释这一行
+  const {identity}=useContext(loginContext)
+  //实现用户权限管理，从后端接收userpower
+  // const  identity  = localStorage.getItem('userpower')
+  // console.log(localStorage.getItem('userpower'))
   // 菜单栏列表
   const items = sideItems
     .filter((i) => {
@@ -55,6 +59,9 @@ export const SideMenu = () => {
             case '5':
               navigate('/company/companyData')
               break
+            case '14':
+              navigate('/company/companyDetail')
+              break
             case '6':
               navigate('/overall/region')
               break
@@ -73,6 +80,7 @@ export const SideMenu = () => {
             case '11':
               navigate('/greenWashing')
               break
+
           }
         }
       : (num) => {

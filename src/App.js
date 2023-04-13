@@ -15,9 +15,12 @@ const MainPage = React.lazy(() =>
 )
 
 const App = () => {
-  // 测试用，展示把false换成true，用户换成管理员
+  // 测试用，展示把false换成true，用户换成管理员，后端用注释的code
   const [isLogin, setIsLogin] = useState(true)
   const [identity, setIdentity] = useState('manager')
+    //使用localstorage接受和使用从后端保存的数据
+    // const isLogin=localStorage.getItem('isLogin')
+    // const identity=localStorage.getItem('userpower')
 
   return (
     <div className="App">
@@ -28,7 +31,10 @@ const App = () => {
       ) : (
         <Suspense fallback={<Loading />}>
           <loginContext.Provider
-            value={{ isLogin, setIsLogin, identity, setIdentity }}
+              //需要切换，去掉两个没有使用的方法
+            value={{ isLogin, identity,setIsLogin,setIdentity }}
+
+            // value={{ isLogin, identity }}
           >
             <LoginPage />
           </loginContext.Provider>
