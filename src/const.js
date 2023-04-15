@@ -81,7 +81,7 @@ const sideItems = [
     icon: <I.RadarChartOutlined />,
     sub: [
       {
-        label: '核放数据',
+        label: '核算数据',
         key: '8',
         path: '/carbon/carbonData',
         element: lazy(() => import('./pages/CarbonCal/CarbonCalData')),

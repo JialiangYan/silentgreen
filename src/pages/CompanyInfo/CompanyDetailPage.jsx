@@ -10,11 +10,11 @@ export default  function CompanyDetailPage  () {
         http://m.cdylhg.com/
       </a>
     </Descriptions.Item>
-    <Descriptions.Item label="Status" span={3}>
-      <Badge status="processing" text="Running" />
+    <Descriptions.Item label="企业状态" span={3}>
+      <Badge status="processing" text="在业" />
     </Descriptions.Item>
 
-    <Descriptions.Item label="Config Info">
+    <Descriptions.Item label="企业信息">
 成都玉龙化工有限公司始建于1958年，位于成都市青白江区，是国家高新技术企业，成都市重点新材料企业和重点培育的企业集团。现有年产20万立方米三聚氰胺泡沫、20万吨合成氨、55万吨化肥、5000吨MCA阻燃剂、2000吨有机硅催化剂、3000吨PVB树脂、1000吨聚脲和3000吨水处理剂的生产能力。
 
 公司科技实力较强，拥有省市两级企业技术中心和院士（专家）创新工作站，具有多项自主知识产权和发明专利，其中：三聚氰胺具有质量优、装置能耗低、周期长的特点！MCA阻燃剂阻燃性能可达V0级！有机硅催化剂**市场占有率较高！

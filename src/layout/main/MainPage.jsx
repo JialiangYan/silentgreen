@@ -62,6 +62,8 @@ export const MainPage = () => {
 
               <Footer style={{ textAlign: 'center' }}>
               默绿SilentGreen @2023/All Right Reserved
+                <br/>
+                备案/许可证编号为：蜀ICP备2023008123号
             </Footer>
           </Layout>
 

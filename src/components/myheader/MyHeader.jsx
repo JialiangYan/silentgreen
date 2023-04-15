@@ -58,7 +58,7 @@ export const MyHeader = () => {
         </Col>
         <Col span={2}>
             {/*需要后端，默认无法点击*/}
-          <Button size={'middle'} onClick={logOut} disabled={true}>退出登录</Button>
+          <Button size={'middle'} onClick={logOut} disabled={false}>退出登录</Button>
         </Col>
       </Row>
     </Header>

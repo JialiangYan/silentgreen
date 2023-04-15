@@ -66,27 +66,27 @@ const columns = [
 const data = [
   {
     key: '1',
-    companyName: '企业1',
+    companyName: '攀钢集团成都有限公司',
     carbonEmitting: 32,
-    address: '成都市青羊区1号路',
+    address: '四川省成都市青羊区',
   },
   {
     key: '2',
-    companyName: '企业2',
+    companyName: '成都玉龙化工有限公司',
     carbonEmitting: 78,
-    address: '成都市武侯区1号路',
+    address: '四川省成都市青羊区',
   },
   {
     key: '3',
-    companyName: '企业3',
+    companyName: '郫都区企业',
     carbonEmitting: 16,
-    address: '成都市青羊区5号路',
+    address: '四川省成都市郫都区',
   },
   {
     key: '4',
-    companyName: '企业4',
+    companyName: '扬子江药业集团',
     carbonEmitting:89,
-    address: '成都市武侯区2号路',
+    address: '四川省成都市都江堰区',
   },
 ];
 const onChange = (pagination, filters, sorter, extra) => {

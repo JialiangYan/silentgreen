@@ -13,7 +13,7 @@ export const Login = () => {
   // 表单成功提交
   const onFinish = (values) => {
     // 暂时放在这里,用后端把这行注释掉
-    setIsLogin(true)
+    // setIsLogin(true)
       console.log(values)
     navigate('/analysis/reAnalysis')
 

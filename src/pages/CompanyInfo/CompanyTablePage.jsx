@@ -6,34 +6,34 @@ import Highlighter from 'react-highlight-words';
 const data = [
   {
     key: '1',
-    companyname: '绿色企业1',
-    teleNum: 111111111,
-    address: '四川省成都市',
-    scCode:'1111111',
+    companyname: '攀钢集团成都有限公司',
+    teleNum: '18180867726',
+    address: '四川省成都市青羊区',
+    scCode:'',
 
   },
   {
     key: '2',
-    companyname: '绿色企业2',
-    teleNum: 222222222,
-    address: '四川省宜宾市',
-    scCode:'1111111',
+    companyname: '成都玉龙化工有限公司',
+    teleNum:'19980823984',
+    address: '四川省成都市青羊区',
+    scCode:'',
 
   },
   {
     key: '3',
-    companyname: '绿色企业3',
-    teleNum: 33333333,
-    address: '四川省攀枝花市',
-    scCode:'1111111',
+    companyname: '郫都区企业',
+    teleNum: '15198662771',
+    address: '四川省成都市郫都区',
+    scCode:'',
 
   },
   {
     key: '4',
-    companyname: '绿色企业4',
-    teleNum: 444444,
-    address: '四川省成都市',
-    scCode:'1111111',
+    companyname: '扬子江药业集团',
+    teleNum: '18177263534',
+    address: '四川省成都市都江堰区',
+    scCode:'',
 
   },
 ];
@@ -146,21 +146,21 @@ export default function CompanyTablePage  () {
   });
   const columns = [
     {
-      title: 'CompanyName',
+      title: '公司名称',
       dataIndex: 'companyname',
       key: 'companyname',
       width: '30%',
       ...getColumnSearchProps('companyname'),
     },
     {
-      title: 'teleNum',
+      title: '联系电话',
       dataIndex: 'teleNum',
       key: 'teleNum',
       width: '20%',
       ...getColumnSearchProps('teleNum'),
     },
     {
-      title: 'Address',
+      title: '地址',
       dataIndex: 'address',
       key: 'address',
       ...getColumnSearchProps('address'),
@@ -168,7 +168,7 @@ export default function CompanyTablePage  () {
       sortDirections: ['descend', 'ascend'],
     },
      {
-      title: 'scCode',
+      title: '社会统一信用代码',
       dataIndex: 'scCode',
       key: 'scCode',
       width: '20%',
@@ -176,7 +176,7 @@ export default function CompanyTablePage  () {
     },
 
            {
-      title: 'companyDetail',
+      title: '公司详情',
       dataIndex: 'companyDetail',
       key: 'companyDetail',
       width: '20%',
