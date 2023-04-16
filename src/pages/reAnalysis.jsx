@@ -2,7 +2,6 @@ import React from 'react'
 import { NumCard } from '../components'
 import { Col, Row } from 'antd'
 import { reAnalysisData } from '../mock/data'
-import './pages.css'
 
 export default function reAnalysis() {
   return (

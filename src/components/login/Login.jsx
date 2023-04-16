@@ -1,35 +1,32 @@
-import React, {createContext, useContext} from 'react'
+import React, { createContext, useContext } from 'react'
 import './Login.css'
 import { Button, Form, Input } from 'antd'
 import loginContext from '../../config/loginContext'
 import { useNavigate } from 'react-router-dom'
-import axiosfunc from "../../utils/axiosfunc";
+import axiosfunc from '../../utils/axiosfunc'
 
 export const Login = () => {
   const { setIsLogin } = useContext(loginContext)
-    const {setIdentity}= useContext(loginContext)
+  const { setIdentity } = useContext(loginContext)
   const navigate = useNavigate()
 
   // 表单成功提交
   const onFinish = (values) => {
     // 暂时放在这里,用后端把这行注释掉
     // setIsLogin(true)
-      console.log(values)
+    console.log(values)
     navigate('/analysis/reAnalysis')
 
-   axiosfunc('post', 'miserauth/login', values).then(
+    axiosfunc('post', 'miserauth/login', values).then(
       (res) => {
         console.log('get response', res)
         if (res.code == 0) {
-
-            localStorage.setItem('isLogin','true')
-            localStorage.setItem('userpower',res.userpower)
-            localStorage.setItem('userInfo',res.userInfo)
-            localStorage.setItem('userName',res.username)
-            console.log(localStorage)
-            // setIsLogin(true)
-
-
+          localStorage.setItem('isLogin', 'true')
+          localStorage.setItem('userpower', res.userpower)
+          localStorage.setItem('userInfo', res.userInfo)
+          localStorage.setItem('userName', res.username)
+          console.log(localStorage)
+          // setIsLogin(true)
         }
       },
       (error) => {

@@ -38,7 +38,7 @@ export const MainPage = () => {
                 margin: '24px 24px 0',
                 padding: '24px 24px 0',
                 backgroundColor: '#fff',
-                overflow:'initial'
+                overflow: 'scroll',
               }}
             >
               <div className="content">
@@ -56,21 +56,17 @@ export const MainPage = () => {
                   {/* 404页面 */}
                   <Route path="*" element={<h1>404 Not Found</h1>}></Route>
                 </Routes>
-
               </div>
             </Content>
 
-              <Footer style={{ textAlign: 'center' }}>
+            <Footer style={{ textAlign: 'center' }}>
               默绿SilentGreen @2023/All Right Reserved
-                <br/>
-                备案/许可证编号为：蜀ICP备2023008123号
+              <br />
+              备案/许可证编号为：蜀ICP备2023008123号
             </Footer>
           </Layout>
-
         </Layout>
-
       </Layout>
-
     </div>
   )
 }

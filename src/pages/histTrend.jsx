@@ -2,7 +2,6 @@ import React from 'react'
 import { Col, Row } from 'antd'
 import { Chart } from '../components'
 import { chartData } from '../mock/data'
-import './pages.css'
 
 export default function hisTrend() {
   return (
