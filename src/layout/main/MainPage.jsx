@@ -59,7 +59,7 @@ export const MainPage = () => {
               </div>
             </Content>
 
-            <Footer style={{ textAlign: 'center' }}>
+            <Footer style={{ textAlign: 'center', height: '10vh' }}>
               默绿SilentGreen @2023/All Right Reserved
               <br />
               备案/许可证编号为：蜀ICP备2023008123号
