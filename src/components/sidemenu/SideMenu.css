@@ -5,6 +5,7 @@
   background-color: #fff;
   height: 92vh;
   width: 100%;
+  overflow: scroll;
 }
 
 /* 去掉antd预设的宽度 */
