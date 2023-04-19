@@ -1,6 +1,27 @@
 import React from 'react'
 import { Badge, Descriptions } from 'antd';
+import axiosfunc from "../../utils/axiosfunc";
+
+
+
+  const data=[
+
+  ]
+
+const getCompanyInfo=(companyid)=>{
+  console.log(companyid)
+      axiosfunc('post','companyInfo/getCompanyInfo',companyid).then(
+          (res)=>{
+            console.log('get response',res)
+          }
+      )
+}
+
+
+
+
 export default  function CompanyDetailPage  () {
+
   return(
       <Descriptions title="Company Info" bordered>
     <Descriptions.Item label="公司名称">成都玉龙化工有限公司</Descriptions.Item>

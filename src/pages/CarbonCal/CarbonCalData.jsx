@@ -84,9 +84,57 @@ const data = [
   },
   {
     key: '4',
-    companyName: '扬子江药业集团',
+    companyName: '成都瀚江新材科技股份有限公司',
     carbonEmitting:89,
+    address: '四川省成都市青白江区',
+  },
+    {
+    key: '5',
+    companyName: '扬子江药业集团',
+    carbonEmitting:32,
     address: '四川省成都市都江堰区',
+
+
+  },
+    {
+    key: '6',
+    companyName: '耀兴乌木工艺品有限公司',
+    carbonEmitting:24,
+    address: '四川省成都市新津县',
+
+
+  },
+    {
+    key: '7',
+    companyName: '成都绿源净化设备有限公司',
+    carbonEmitting:56,
+    address: '四川省成都市青新津县',
+
+
+  },
+    {
+    key: '8',
+    companyName: '四川可普立信环境工程有限公司',
+    carbonEmitting:76,
+    address: '四川省成都市新津县',
+
+
+  },
+    {
+    key: '9',
+    companyName: '攀枝花兴中矿业有限公司',
+    carbonEmitting:56,
+    address: '四川省攀枝花市',
+
+
+  },
+    {
+    key: '10',
+    companyName: '成都鸿福来塑料制品有限公司',
+    carbonEmitting:33,
+    address: '四川省成都市青白江区',
+
+
   },
 ];
 const onChange = (pagination, filters, sorter, extra) => {

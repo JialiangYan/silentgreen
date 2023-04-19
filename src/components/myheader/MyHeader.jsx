@@ -25,6 +25,7 @@ export const MyHeader = () => {
         localStorage.removeItem('userName')
         localStorage.removeItem('userInfo')
         navigate('/')
+        window.location.reload()
       }
     })
   }

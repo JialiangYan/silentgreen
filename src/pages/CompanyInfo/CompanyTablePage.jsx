@@ -22,7 +22,7 @@ const data = [
   },
   {
     key: '3',
-    companyname: '郫都区企业',
+    companyname: '成都拓米电子装备制造有限公司',
     teleNum: '15198662771',
     address: '四川省成都市郫都区',
     scCode:'',
@@ -30,12 +30,61 @@ const data = [
   },
   {
     key: '4',
-    companyname: '扬子江药业集团',
+    companyname: '成都瀚江新材科技股份有限公司',
     teleNum: '18177263534',
+    address: '四川省成都市青白江区',
+    scCode:'',
+
+  },
+    {
+    key: '5',
+    companyname: '扬子江药业集团',
+    teleNum: '18955673534',
     address: '四川省成都市都江堰区',
     scCode:'',
 
   },
+    {
+    key: '6',
+    companyname: '耀兴乌木工艺品有限公司',
+    teleNum: '19154442321',
+    address: '四川省成都市新津县',
+    scCode:'',
+
+  },
+    {
+    key: '7',
+    companyname: '成都绿源净化设备有限公司',
+    teleNum: '18782964376',
+    address: '四川省成都市青新津县',
+    scCode:'',
+
+  },
+    {
+    key: '8',
+    companyname: '四川可普立信环境工程有限公司',
+    teleNum: '',
+    address: '四川省成都市新津县',
+    scCode:'',
+
+  },
+    {
+    key: '9',
+    companyname: '攀枝花兴中矿业有限公司',
+    teleNum: '',
+    address: '四川省攀枝花市',
+    scCode:'',
+
+  },
+    {
+    key: '10',
+    companyname: '成都鸿福来塑料制品有限公司',
+    teleNum: '',
+    address: '四川省成都市青白江区',
+    scCode:'',
+
+  },
+
 ];
 export default function CompanyTablePage  () {
   const [searchText, setSearchText] = useState('');

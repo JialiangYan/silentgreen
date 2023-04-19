@@ -1,7 +1,7 @@
 import { Table } from 'antd';
 import React, {useEffect} from 'react'
 import axiosfunc from "../../utils/axiosfunc";
-
+import axios from 'axios'
 
 
 
@@ -262,11 +262,13 @@ const columns = [
     render: () => <a>action</a>,
   },
 ];
-const getCompanyInfo=(companyname)=>{
-  console.log(companyname)
-      axiosfunc('get','companyInfo/getCompanyInfo',companyname).then(
+const getCompanyInfo=(companyid)=>{
+  console.log(companyid)
+      axiosfunc('post','companyInfo/getCompanyInfo',companyid).then(
           (res)=>{
             console.log('get response',res)
+            localStorage.setItem('companyinfo',res.data)
+
           }
       )
 }
@@ -284,14 +286,56 @@ const data = [
   },
     {
       key:'3',
-    companyname: '扬子江药业集团',
+    companyname: '成都瀚江新材科技股份有限公司',
     teleNum: '18177263534'
   },
     {
       key:'4',
-    companyname: '郫都区企业',
+    companyname: '成都拓米电子装备制造有限公司',
     teleNum: '15198662771'
-  }
+  },
+    {
+    key: '5',
+    companyname: '扬子江药业集团',
+    teleNum: '18955673534',
+
+
+  },
+    {
+    key: '6',
+    companyname: '耀兴乌木工艺品有限公司',
+    teleNum: '19154442321',
+
+
+  },
+    {
+    key: '7',
+    companyname: '成都绿源净化设备有限公司',
+    teleNum: '18782964376',
+
+
+  },
+    {
+    key: '8',
+    companyname: '四川可普立信环境工程有限公司',
+    teleNum: '',
+
+
+  },
+    {
+    key: '9',
+    companyname: '攀枝花兴中矿业有限公司',
+    teleNum: '',
+
+
+  },
+    {
+    key: '10',
+    companyname: '成都鸿福来塑料制品有限公司',
+    teleNum: '',
+
+
+  },
 
 
 ];
@@ -338,10 +382,19 @@ const data = [
 //   });
 // }
 export default  function CompanyDataPage () {
+  const dataList=[]
+  // dataDIc["companyname"]="成都玉龙化工有限公司"
+  // const jsonDataDic =JSON.stringify(dataDIc)
+  useEffect(() => {
+    for(let i=1;i<4;i++){
+      let companyid=i.toString()
+      const info=localStorage.getItem('companyinfo')
 
-  // useEffect(() => {
-  //   getCompanyInfo({'companyname':'成都玉龙化工有限公司'})
-  // }, [])
+      console.log(typeof (info))
+      dataList.push(info)
+    }
+  console.log(dataList)
+  }, [])
 
   return(
         <Table
