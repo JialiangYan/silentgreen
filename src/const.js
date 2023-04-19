@@ -76,7 +76,7 @@ const sideItems = [
     identity: 'manager',
   },
   {
-    label: '碳排查',
+    label: '碳盘查',
     key: 'sub4',
     icon: <I.RadarChartOutlined />,
     sub: [

@@ -17,9 +17,9 @@ export const LoginPage = React.memo(() => {
   return (
     <div className="loginPage">
       <Routes>
-        <Route path="/" element={<Register />}></Route>
+        <Route path="/" element={<Login />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route index element={<Register />}></Route>
+        <Route index element={<Login />}></Route>
       </Routes>
     </div>
   )
