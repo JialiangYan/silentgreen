@@ -1,21 +1,23 @@
 import React from 'react'
-import { Card } from 'antd'
+import './NumCard.css'
 
 export const NumCard = (props) => {
-  console.log(props)
   const { content, title } = props
 
   return (
     <div>
-      <Card title={title} bordered={true} style={{ height: '30vh' }}>
-        {Array.isArray(content) ? (
-          content.map((item, key) => {
-            return <p key={key}>{item}</p>
-          })
-        ) : (
-          <p>{content}</p>
-        )}
-      </Card>
+      <div className="card">
+        <div className="title">{title}</div>
+        <div className="description">
+          {Array.isArray(content) ? (
+            content.map((item, key) => {
+              return <p key={key}>{item}</p>
+            })
+          ) : (
+            <p>{content}</p>
+          )}
+        </div>
+      </div>
     </div>
   )
 }

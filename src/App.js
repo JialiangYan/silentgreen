@@ -1,7 +1,7 @@
-import React, { useState, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import { Loading } from './components'
-import './App.css'
 import loginContext from './config/loginContext'
+import './App.css'
 // 导入页面
 const LoginPage = React.lazy(() =>
   import('./layout/login/LoginPage').then(({ LoginPage }) => ({
