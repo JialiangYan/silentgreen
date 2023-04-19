@@ -70,7 +70,7 @@ const sideItems = [
         label: '行业信息',
         key: '7',
         path: '/overall/industry',
-        element: lazy(() => import('./pages/reAnalysis')),
+        element: lazy(() => import('./pages/industry')),
       },
     ],
     identity: 'manager',

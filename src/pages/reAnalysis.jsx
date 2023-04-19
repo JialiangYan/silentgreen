@@ -7,7 +7,7 @@ export default function reAnalysis() {
   return (
     <div className="reAnalysis">
       <div className="content">
-        <Row gutter={[50, 50]}>
+        <Row gutter={[24, 24]}>
           <Col span={12}>
             <NumCard {...reAnalysisData[0]} />
           </Col>

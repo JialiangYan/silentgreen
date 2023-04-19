@@ -1,0 +1,69 @@
+.wrapper {
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 25px;
+  overflow: auto;
+  padding-left: 0;
+}
+
+.card {
+  background: #c7f9cc;
+  padding: 40px 30px;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 65vh;
+  width: 100%;
+}
+
+/* 标题 */
+.card .title {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+/* 描述信息 */
+.card .subtitle {
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+.card + .card {
+  margin-left: 2vw;
+}
+
+.content {
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.data-item {
+  margin-top: 40px;
+  font-size: 1.1em;
+}
+
+/* 左栏目 */
+.carbon {
+  max-width: 40vw;
+}
+.carbon .title {
+  margin-bottom: 20px;
+}
+
+/* 左栏目 */
+.green {
+  max-width: 40vw;
+}
+.green .title {
+  margin-bottom: 20px;
+}
