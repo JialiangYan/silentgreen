@@ -1,10 +1,10 @@
 import { Table } from 'antd';
-import React, {useEffect} from 'react'
+import React, {useEffect,useState} from 'react'
 import axiosfunc from "../../utils/axiosfunc";
 import axios from 'axios'
 
-
-
+var dataList=[]
+var dataObj
 const columns = [
 {
     title: '公司名称',
@@ -262,17 +262,29 @@ const columns = [
     render: () => <a>action</a>,
   },
 ];
+const getDataList=()=>{
+      for(var i=1;i<7;i++){
+        const companyid=i.toString()
+        getCompanyInfo(companyid)
+      }
+
+}
 const getCompanyInfo=(companyid)=>{
   console.log(companyid)
       axiosfunc('post','companyInfo/getCompanyInfo',companyid).then(
           (res)=>{
+            const dic={}
             console.log('get response',res)
-            localStorage.setItem('companyinfo',res.data)
-
+            dataObj=JSON.parse(res.data)
+            dic.key=companyid
+            dic.companyname=dataObj.companyName
+            dic.teleNum=dataObj.companyTeleNum
+            dataList.push(dic)
           }
       )
 }
-
+  //获取后台数据
+  // getDataList()
 const data = [
   {
     key:'1',
@@ -318,27 +330,28 @@ const data = [
     {
     key: '8',
     companyname: '四川可普立信环境工程有限公司',
-    teleNum: '',
+    teleNum: '19176075433',
 
 
   },
     {
     key: '9',
     companyname: '攀枝花兴中矿业有限公司',
-    teleNum: '',
+    teleNum: '18276552032',
 
 
   },
     {
     key: '10',
     companyname: '成都鸿福来塑料制品有限公司',
-    teleNum: '',
+    teleNum: '18623789724',
 
 
   },
 
 
 ];
+
 // for (let i = 0; i < 5; i++) {
 //   data.push({
 //     key: i,
@@ -382,24 +395,23 @@ const data = [
 //   });
 // }
 export default  function CompanyDataPage () {
-  const dataList=[]
+  const [dataListState,setDataList]=useState([])
   // dataDIc["companyname"]="成都玉龙化工有限公司"
   // const jsonDataDic =JSON.stringify(dataDIc)
-  useEffect(() => {
-    for(let i=1;i<4;i++){
-      let companyid=i.toString()
-      const info=localStorage.getItem('companyinfo')
 
-      console.log(typeof (info))
-      dataList.push(info)
-    }
-  console.log(dataList)
+  useEffect(() => {
+
+  // console.log(dataList)
+    setDataList(data)
+    console.log(dataListState)
+
   }, [])
 
   return(
+
         <Table
     columns={columns}
-    dataSource={data}
+    dataSource={dataListState}
     scroll={{
       x: 1500,
       y: 300,

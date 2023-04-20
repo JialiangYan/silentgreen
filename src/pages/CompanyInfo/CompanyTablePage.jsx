@@ -63,7 +63,7 @@ const data = [
     {
     key: '8',
     companyname: '四川可普立信环境工程有限公司',
-    teleNum: '',
+    teleNum: '19176075433',
     address: '四川省成都市新津县',
     scCode:'',
 
@@ -71,7 +71,7 @@ const data = [
     {
     key: '9',
     companyname: '攀枝花兴中矿业有限公司',
-    teleNum: '',
+    teleNum: '18276552032',
     address: '四川省攀枝花市',
     scCode:'',
 
@@ -79,7 +79,7 @@ const data = [
     {
     key: '10',
     companyname: '成都鸿福来塑料制品有限公司',
-    teleNum: '',
+    teleNum: '18623789724',
     address: '四川省成都市青白江区',
     scCode:'',
 
