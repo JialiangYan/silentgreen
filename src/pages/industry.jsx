@@ -2,6 +2,7 @@ import React from 'react'
 import { CircleChart } from '../components'
 import { Col, Row } from 'antd'
 import './industry.css'
+import { circleData } from '../mock/data'
 export default function industry() {
   return (
     <div className="wrapper">
@@ -18,7 +19,7 @@ export default function industry() {
               </div>
             </Col>
             <Col span={12}>
-              <CircleChart />
+              <CircleChart propsData={circleData[0]} />
             </Col>
           </Row>
         </div>
@@ -38,7 +39,7 @@ export default function industry() {
               </div>
             </Col>
             <Col span={12}>
-              <CircleChart />
+              <CircleChart propsData={circleData[1]} />
             </Col>
           </Row>
         </div>

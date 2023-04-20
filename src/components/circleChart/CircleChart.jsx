@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactECharts from 'echarts-for-react'
 // 在此组件中绘制一个简单的分布图
-export const CircleChart = () => {
+export const CircleChart = (props) => {
+  const { title1, title2, value1, value2 } = props.propsData
   // 返回分布图的配置对象
   const option = {
     tooltip: {
@@ -15,7 +16,7 @@ export const CircleChart = () => {
       {
         name: '测试',
         type: 'pie',
-        radius: ['40%', '70%'],
+        radius: ['50%', '70%'],
         avoidLabelOverlap: false,
         itemStyle: {
           borderRadius: 10,
@@ -37,8 +38,8 @@ export const CircleChart = () => {
           show: false,
         },
         data: [
-          { value: 2000, name: '存在漂绿行为' },
-          { value: 400, name: '不存在漂绿行为' },
+          { value: value1, name: title1 },
+          { value: value2, name: title2 },
         ],
       },
     ],

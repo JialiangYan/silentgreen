@@ -76,7 +76,7 @@ export default function Home() {
                         }}
                       ></span>
                     </div>
-                    <p className="box-progress-percentage">{item.progress}</p>
+                    <p className="box-progress-percentage">{item.progress}%</p>
                   </div>
                   <div className="project-box-footer">
                     <div

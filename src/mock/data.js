@@ -84,3 +84,18 @@ export const mainData = [
     progressColor: '#4067f9',
   },
 ]
+
+export const circleData = [
+  {
+    title1: '平均值以下的企业',
+    title2: '平均值以上的企业',
+    value1: 150,
+    value2: 100,
+  },
+  {
+    title1: '非绿色企业',
+    title2: '绿色企业',
+    value1: 150,
+    value2: 100,
+  },
+]
