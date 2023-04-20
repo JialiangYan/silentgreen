@@ -1,6 +1,6 @@
 export const reAnalysisData = [
   { title: '网页浏览人数', content: '128人' },
-  { title: '流量包使用量', content: '128GB/GB/600GB' },
+  { title: '流量包使用量', content: '128GB/600GB' },
   { title: '公网带宽使用', content: ['188（出）Mnps', '496（入）Mbps'] },
   { title: '系统盘使用量', content: '60GB/80GB' },
 ]
@@ -48,7 +48,7 @@ export const mainData = [
     progressColor: '#4f3ff0',
   },
   {
-    header: '绿色企业占比',
+    header: '辖区内已注册企业占比',
     subheader: '描述',
     progressHeader: '描述',
     progress: 50,
@@ -57,7 +57,7 @@ export const mainData = [
     progressColor: '#096c86',
   },
   {
-    header: '平均值以上企业占比',
+    header: '高碳排放企业占比',
     subheader: '描述',
     progressHeader: '描述',
     progress: 50,
@@ -66,16 +66,16 @@ export const mainData = [
     progressColor: '#df3670',
   },
   {
-    header: '待定',
+    header: '绿色企业占比',
     subheader: '描述',
     progressHeader: '描述',
     progress: 50,
     footer: '描述',
-    bgc: '#c8f7dc',
+    bgc: '#c7f9cc',
     progressColor: '#34c471',
   },
   {
-    header: '待定',
+    header: '绿色漂洗企业占比',
     subheader: '描述',
     progressHeader: '描述',
     progress: 50,

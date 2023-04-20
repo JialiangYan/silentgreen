@@ -108,7 +108,7 @@ export const SideMenu = () => {
         <ConfigProvider
           theme={{
             token: {
-              colorPrimary: '#00b96b',
+              colorPrimary: '#57cc99',
             },
           }}
         >
