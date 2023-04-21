@@ -1,0 +1,7 @@
+export { default as LoadingOutlined } from '@ant-design/icons/LoadingOutlined'
+export { default as SearchOutlined } from '@ant-design/icons/SearchOutlined'
+export { default as UserOutlined } from '@ant-design/icons/UserOutlined'
+export { default as AreaChartOutlined } from '@ant-design/icons/AreaChartOutlined'
+export { default as PieChartOutlined } from '@ant-design/icons/PieChartOutlined'
+export { default as RadarChartOutlined } from '@ant-design/icons/RadarChartOutlined'
+export { default as EditOutlined } from '@ant-design/icons/EditOutlined'

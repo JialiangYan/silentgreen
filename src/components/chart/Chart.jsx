@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactECharts from 'echarts-for-react'
+import ReactEchartsCore from 'echarts-for-react'
 
 // 在此组件中绘制一个简单的折线图
 export const Chart = (props) => {
@@ -44,7 +44,7 @@ export const Chart = (props) => {
   }
   return (
     <div>
-      <ReactECharts option={option} />
+      <ReactEchartsCore option={option} />
     </div>
   )
 }

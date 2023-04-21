@@ -1,4 +1,9 @@
-import * as I from '@ant-design/icons'
+import {
+  AreaChartOutlined,
+  PieChartOutlined,
+  RadarChartOutlined,
+  EditOutlined,
+} from './assets/antd-icons'
 import { lazy } from 'react'
 import React from 'react'
 
@@ -6,7 +11,7 @@ const sideItems = [
   {
     label: '访问分析',
     key: 'sub1',
-    icon: <I.AreaChartOutlined />,
+    icon: <AreaChartOutlined />,
     sub: [
       {
         label: '实时数据',
@@ -26,7 +31,7 @@ const sideItems = [
   {
     label: '企业分析',
     key: 'sub2',
-    icon: <I.AreaChartOutlined />,
+    icon: <AreaChartOutlined />,
     sub: [
       {
         label: '企业信息',
@@ -58,7 +63,7 @@ const sideItems = [
   {
     label: '总体分析',
     key: 'sub3',
-    icon: <I.PieChartOutlined />,
+    icon: <PieChartOutlined />,
     sub: [
       {
         label: '区域信息',
@@ -78,7 +83,7 @@ const sideItems = [
   {
     label: '碳盘查',
     key: 'sub4',
-    icon: <I.RadarChartOutlined />,
+    icon: <RadarChartOutlined />,
     sub: [
       {
         label: '核算数据',
@@ -98,7 +103,7 @@ const sideItems = [
   {
     label: '绿色绩效',
     key: '10',
-    icon: <I.RadarChartOutlined />,
+    icon: <RadarChartOutlined />,
     element: lazy(() => import('./pages/reAnalysis')),
     path: '/greenGrade',
     identity: 'manager',
@@ -106,7 +111,7 @@ const sideItems = [
   {
     label: '绿色漂洗',
     key: '11',
-    icon: <I.RadarChartOutlined />,
+    icon: <RadarChartOutlined />,
     element: lazy(() => import('./pages/reAnalysis')),
     path: '/greenWashing',
     identity: 'manager',
@@ -114,7 +119,7 @@ const sideItems = [
   {
     label: '申报',
     key: '12',
-    icon: <I.EditOutlined />,
+    icon: <EditOutlined />,
     element: lazy(() => import('./pages/reAnalysis')),
     path: '/declare',
     identity: 'company',
@@ -122,7 +127,7 @@ const sideItems = [
   {
     label: '反馈',
     key: '13',
-    icon: <I.EditOutlined />,
+    icon: <EditOutlined />,
     element: lazy(() => import('./pages/reAnalysis')),
     path: '/feedback',
     identity: 'company',

@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactECharts from 'echarts-for-react'
+import ReactEChartsCore from 'echarts-for-react'
 // 在此组件中绘制一个简单的分布图
 export const CircleChart = (props) => {
   const { title1, title2, value1, value2 } = props.propsData
@@ -46,7 +46,7 @@ export const CircleChart = (props) => {
   }
   return (
     <div>
-      <ReactECharts option={option} />
+      <ReactEChartsCore option={option} />
     </div>
   )
 }

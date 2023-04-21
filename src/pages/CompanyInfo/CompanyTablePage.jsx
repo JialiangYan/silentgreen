@@ -1,106 +1,101 @@
-import { SearchOutlined } from '@ant-design/icons';
-import { Button, Input, Space, Table } from 'antd';
-import { useRef, useState } from 'react';
-import React  from "react";
-import Highlighter from 'react-highlight-words';
+import { SearchOutlined } from '../../assets/antd-icons'
+import { Button, Input, Space, Table } from 'antd'
+import { useRef, useState } from 'react'
+import React from 'react'
+import Highlighter from 'react-highlight-words'
 const data = [
   {
     key: '1',
     companyname: '攀钢集团成都有限公司',
     teleNum: '18180867726',
     address: '四川省成都市青羊区',
-    scCode:'',
-
+    scCode: '',
   },
   {
     key: '2',
     companyname: '成都玉龙化工有限公司',
-    teleNum:'19980823984',
+    teleNum: '19980823984',
     address: '四川省成都市青羊区',
-    scCode:'',
-
+    scCode: '',
   },
   {
     key: '3',
     companyname: '成都拓米电子装备制造有限公司',
     teleNum: '15198662771',
     address: '四川省成都市郫都区',
-    scCode:'',
-
+    scCode: '',
   },
   {
     key: '4',
     companyname: '成都瀚江新材科技股份有限公司',
     teleNum: '18177263534',
     address: '四川省成都市青白江区',
-    scCode:'',
-
+    scCode: '',
   },
-    {
+  {
     key: '5',
     companyname: '扬子江药业集团',
     teleNum: '18955673534',
     address: '四川省成都市都江堰区',
-    scCode:'',
-
+    scCode: '',
   },
-    {
+  {
     key: '6',
     companyname: '耀兴乌木工艺品有限公司',
     teleNum: '19154442321',
     address: '四川省成都市新津县',
-    scCode:'',
-
+    scCode: '',
   },
-    {
+  {
     key: '7',
     companyname: '成都绿源净化设备有限公司',
     teleNum: '18782964376',
     address: '四川省成都市青新津县',
-    scCode:'',
-
+    scCode: '',
   },
-    {
+  {
     key: '8',
     companyname: '四川可普立信环境工程有限公司',
     teleNum: '19176075433',
     address: '四川省成都市新津县',
-    scCode:'',
-
+    scCode: '',
   },
-    {
+  {
     key: '9',
     companyname: '攀枝花兴中矿业有限公司',
     teleNum: '18276552032',
     address: '四川省攀枝花市',
-    scCode:'',
-
+    scCode: '',
   },
-    {
+  {
     key: '10',
     companyname: '成都鸿福来塑料制品有限公司',
     teleNum: '18623789724',
     address: '四川省成都市青白江区',
-    scCode:'',
-
+    scCode: '',
   },
-
-];
-export default function CompanyTablePage  () {
-  const [searchText, setSearchText] = useState('');
-  const [searchedColumn, setSearchedColumn] = useState('');
-  const searchInput = useRef(null);
+]
+export default function CompanyTablePage() {
+  const [searchText, setSearchText] = useState('')
+  const [searchedColumn, setSearchedColumn] = useState('')
+  const searchInput = useRef(null)
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
-    confirm();
-    setSearchText(selectedKeys[0]);
-    setSearchedColumn(dataIndex);
-  };
+    confirm()
+    setSearchText(selectedKeys[0])
+    setSearchedColumn(dataIndex)
+  }
   const handleReset = (clearFilters) => {
-    clearFilters();
-    setSearchText('');
-  };
+    clearFilters()
+    setSearchText('')
+  }
   const getColumnSearchProps = (dataIndex) => ({
-    filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters, close }) => (
+    filterDropdown: ({
+      setSelectedKeys,
+      selectedKeys,
+      confirm,
+      clearFilters,
+      close,
+    }) => (
       <div
         style={{
           padding: 8,
@@ -111,7 +106,9 @@ export default function CompanyTablePage  () {
           ref={searchInput}
           placeholder={`Search ${dataIndex}`}
           value={selectedKeys[0]}
-          onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
+          onChange={(e) =>
+            setSelectedKeys(e.target.value ? [e.target.value] : [])
+          }
           onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
           style={{
             marginBottom: 8,
@@ -145,9 +142,9 @@ export default function CompanyTablePage  () {
             onClick={() => {
               confirm({
                 closeDropdown: false,
-              });
-              setSearchText(selectedKeys[0]);
-              setSearchedColumn(dataIndex);
+              })
+              setSearchText(selectedKeys[0])
+              setSearchedColumn(dataIndex)
             }}
           >
             Filter
@@ -156,7 +153,7 @@ export default function CompanyTablePage  () {
             type="link"
             size="small"
             onClick={() => {
-              close();
+              close()
             }}
           >
             close
@@ -192,7 +189,7 @@ export default function CompanyTablePage  () {
       ) : (
         text
       ),
-  });
+  })
   const columns = [
     {
       title: '公司名称',
@@ -216,7 +213,7 @@ export default function CompanyTablePage  () {
       sorter: (a, b) => a.address.length - b.address.length,
       sortDirections: ['descend', 'ascend'],
     },
-     {
+    {
       title: '社会统一信用代码',
       dataIndex: 'scCode',
       key: 'scCode',
@@ -224,13 +221,13 @@ export default function CompanyTablePage  () {
       ...getColumnSearchProps('scCode'),
     },
 
-           {
+    {
       title: '公司详情',
       dataIndex: 'companyDetail',
       key: 'companyDetail',
       width: '20%',
       render: () => <a>详情</a>,
     },
-  ];
-  return <Table columns={columns} dataSource={data} />;
-};
+  ]
+  return <Table columns={columns} dataSource={data} />
+}

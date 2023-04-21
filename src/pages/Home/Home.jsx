@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserOutlined } from '@ant-design/icons'
+import { UserOutlined } from '../../assets/antd-icons'
 import { Avatar, Space } from 'antd'
 import { mainData } from '../../mock/data'
 import './home.css'
