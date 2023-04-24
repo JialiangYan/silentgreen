@@ -7,19 +7,12 @@ const Login = React.lazy(() =>
     default: Login,
   }))
 )
-const Register = React.lazy(() =>
-  import('../../components/register/Register').then(({ Register }) => ({
-    default: Register,
-  }))
-)
 
 export const LoginPage = React.memo(() => {
   return (
     <div className="loginPage">
       <Routes>
-        <Route path="/" element={<Login />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route index element={<Login />}></Route>
+        <Route index path="/" element={<Login />}></Route>
       </Routes>
     </div>
   )

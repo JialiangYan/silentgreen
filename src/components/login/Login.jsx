@@ -16,7 +16,6 @@ export const Login = () => {
     // setIsLogin(true)
     console.log(values)
 
-
     axiosfunc('post', 'miserauth/login', values).then(
       (res) => {
         console.log('get response', res)
@@ -33,9 +32,8 @@ export const Login = () => {
         console.log('get response failed!')
       }
     )
-      navigate('/analysis/reAnalysis')
-      // window.location.reload()
-
+    navigate('/analysis/reAnalysis')
+    // window.location.reload()
   }
   return (
     <div className="form-box">

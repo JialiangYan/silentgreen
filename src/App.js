@@ -1,14 +1,14 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Loading } from './components'
 import loginContext from './config/loginContext'
 import './App.css'
 // 导入页面
-const LoginPage = React.lazy(() =>
+const LoginPage = lazy(() =>
   import('./layout/login/LoginPage').then(({ LoginPage }) => ({
     default: LoginPage,
   }))
 )
-const MainPage = React.lazy(() =>
+const MainPage = lazy(() =>
   import('./layout/main/MainPage').then(({ MainPage }) => ({
     default: MainPage,
   }))
@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {true ? (
+      {false ? (
         <Suspense fallback={<Loading />}>
           <MainPage />
         </Suspense>
@@ -33,7 +33,6 @@ const App = () => {
           <loginContext.Provider
             //需要切换，去掉两个没有使用的方法
             // value={{ isLogin, identity,setIsLogin,setIdentity }}
-
             value={{ isLogin, identity }}
           >
             <LoginPage />
